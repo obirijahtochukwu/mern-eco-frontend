@@ -18,7 +18,7 @@ export default function CreateAccount() {
   
   const register = (e) =>{
     e.preventDefault();
-      Axios.post("http://localhost:4000/signup",{
+      Axios.post("https://obj-api.herokuapp.com/signup",{
         name: `${firstName} ${lastName}`,
         email: email,
         password: password,

@@ -32,14 +32,14 @@ export default function App() {
   const {items, setItems, loading, setLoading } = useGlobalContext();
   
   useEffect(() => {
-      axios.get('http://obj-eco-api/user', {withCredentials:true})
+      axios.get('https://obj-api.herokuapp.com/user', {withCredentials:true})
         .then(res => {
           user.setEmail(res.data.email);
       });
   }, [user]);
 
   useEffect(() => {
-    axios.get('http://obj-eco-api/products', {withCredentials:true}
+    axios.get('https://obj-api.herokuapp.com/products', {withCredentials:true}
     ).then((res)=>{ 
       setItems(res.data);
       setLoading(false)
@@ -47,7 +47,7 @@ export default function App() {
   }, [items, setItems, setLoading]);
 
   useEffect(() => {
-    axios.get('http://obj-eco-api/cart', {withCredentials:true}
+    axios.get('https://obj-api.herokuapp.com/cart', {withCredentials:true}
     ).then((res)=>{
       setCart(res.data)
       setLoading(false)
