@@ -7,6 +7,7 @@ import Modal from '../modal/Modal';
 export default function Details() {
   
   const users = useGlobalContext();
+    // eslint-disable-next-line
   const [cart, setCart] = users.carts;
   const {detailProduct,addToCart, setLoading} = useGlobalContext();
   const [inCart, setInCart] = useState(false);
