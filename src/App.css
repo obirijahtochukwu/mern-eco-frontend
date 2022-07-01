@@ -1,0 +1,288 @@
+body {
+ background-color: lavender;
+ font-family: sans-serif;
+ box-sizing: border-box;
+}
+
+h5 {
+ font-weight: 600;
+}
+
+button {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+.orange {
+ color: orange;
+}
+
+.bg-grey {
+ background-color: rgb(255, 252, 255, 0.4);
+}
+
+.text-bold{
+  font-weight: 700;
+}
+
+sup {
+  color: orangered;
+  background-color: rgba(253, 165, 1, 0.4);
+  padding: 0.1rem;
+  font-weight: lighter !important;
+  font-size: medium;
+  border-radius: 5px;
+}
+
+.add-btn {
+ padding: 0.5rem;
+ border: 0.1rem solid orange;
+ border-radius: 5px;
+ font-weight: 700;
+ text-transform: uppercase;
+ color: white;
+ background-color: orange;
+ box-shadow: 0 2px 15px 2px rgb(0, 0, 0, 0.2);
+ transition: all 1s ease-in-out;
+}
+.add-btn:hover {
+ background-color: white;
+ color: orange;
+}
+
+/* CAROUSEL */
+.services {
+ cursor: pointer;
+ text-transform: capitalize;
+ margin: 1rem;
+}
+.services > h6 {
+ font-weight: 500;
+ margin-top: 0.2rem;
+ text-align: center;
+}
+
+/* RECOMMENDED */
+.recommended {
+ padding: 1rem;
+ border-top: 0.2rem solid lavender;
+}
+.recommended-overflow {
+ display: flex;
+ overflow-x: scroll;
+ height: 100%;
+}
+
+.recommended-card {
+ display: block;
+ margin: 1rem;
+ position: relative;
+ text-transform: capitalize;
+ padding: 0 !important;
+ transition: all 0.4s linear;
+}
+.recommended-card:hover {
+ box-shadow: 2px 2px 20px 5px rgb(0, 0, 0, 0.2);
+}
+.recommended-card h6 {
+  color: blue;
+  font-size: small;
+  font-weight: bolder !important;
+ margin-left: 0.5rem;
+ font-weight: lighter ;
+}
+.recommended-card div {
+ margin-left: 0.5rem;
+ font-weight: lighter;
+}
+.recommended-card p {
+  color: black;
+ margin-left: 0.5rem;
+ padding-bottom: 0.7rem;
+ font-weight: bolder;
+}
+.top {
+ position: absolute;
+ top: 0;
+ right: 0;
+ color: white !important;
+ background-color: orange;
+ font-size: rem;
+ border-radius: 0 0 0 5px;
+}
+.img-border {
+ border-radius: 10px;
+ margin-top: 0.5rem;
+ margin-bottom: 0.7rem;
+}
+
+/* DEFACTO STORE */
+.defacto {
+ background-color: rgb(124, 252, 0, 0.7);
+ font-size: larger;
+}
+.defacto div {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+/* BRAND */
+.brand {
+ color: white;
+ background-color: rgb(255, 0, 0, 0.8);
+ font-size: larger;
+}
+.brand div {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+/* ANKER STORE */
+.anker {
+ background-color: rgba(253, 165, 1, 0.6);
+ font-size: larger;
+}
+.anker div {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+/* NIKE STORE */
+.nike {
+ background-color: rgba(0, 0, 0, 0.2);
+ font-size: larger;
+}
+.nike div {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+/* PRODUCT-CARD*/
+.product-card {
+  background-color: white;
+ margin-bottom: 0.5rem;
+ border: 0.04rem solid rgb(255, 165, 0, 0.5);
+ border-radius: 5px;
+ transition: all 0.5s ease-in-out;
+}
+.product-card:hover {
+  box-shadow: 2px 2px 8px 5px rgb(0, 0, 0, 0.2);
+}
+.product-card p {
+  color: blue !important;
+  font-size: small;
+  font-weight: bolder !important;
+}
+.product-btn {
+  background-color: orange;
+  text-transform: capitalize;
+  font-weight: bold;
+ border: transparent;
+ border-radius: 7px;
+}
+
+
+/* DETAILS */
+.sticky {
+ position: sticky;
+ bottom: 0;
+ border-top: 0.1rem solid rgba(253, 165, 1);
+}
+
+/* CART */
+.car {
+ border: 0.06rem solid orange;
+ box-shadow: 2px 2px 8px 5px rgb(0, 0, 0, 0.2);
+}
+.empty-cart {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+.empty-cart div {
+  border-radius: 10px;
+  padding: 3rem;
+}
+
+
+/* SIGNUP */
+form {
+  color: white;
+  background-color: darkblue;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px rgb(255, 165, 0, 0.5);
+}
+form input {
+  color: white;
+  background-color: darkblue;
+  font-weight: 600;
+  border: 0.2rem solid orange;
+  border-radius: 8px;
+  transition: all 0.4s ease-in-out;
+}
+form input:focus {
+  box-shadow: 0 0 0 5px rgb(255, 165, 0, 0.7);
+}
+form button {
+  color: white;
+  background-color: orange;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border: 0.2rem solid orange;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+form button:hover {
+  color: orange;
+  background-color: darkblue;
+  box-shadow: 0 0 0 5px rgb(255, 165, 0, 0.7);
+}
+
+
+/* SEARCH ITEMS */
+.not-found {
+  height: 90vh;
+  background-color: white;
+}
+.not-found .div {
+  font-size: larger;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 800px 5000px rgb(0, 0, 0, 0.2);
+}
+
+/* footer */
+footer {
+ background-color: rgb(0, 0, 0, 0.8);
+ color: white;
+ margin-top: 2rem;
+ margin-bottom: 0;
+}
+footer h1 {
+ color: orange;
+ font-family: cursive;
+}
+.btn-outline-white {
+ color: orange;
+ border: 0.06rem solid orange;
+ font-weight: bolder;
+ transition: all 0.5s ease-in;
+}
+.btn-outline-white:hover {
+ background-color: orange;
+ color: white;
+}
+.download {
+ margin-top: 2rem;
+ text-transform: capitalize;
+}

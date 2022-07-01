@@ -1,0 +1,23 @@
+.loading {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+ top: 0 !important;
+ z-index: 1;
+ visibility: visible;
+ background-color: rgb(255, 165, 0, 0.2);
+ height: 100%;
+ width: 100%;
+}
+
+.loading-icon {
+ background-color: white;
+ font-size: x-large;
+ border-radius: 50%;
+ animation: loading 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+ 0% {transform: scale(1.5) rotate(0.7turn)}
+}
