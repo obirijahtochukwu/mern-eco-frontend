@@ -15,7 +15,7 @@ const AppProvider = ({ children }) => {
   const [cart,setCart] = useState([]);
 
   const logout = () => {
-    axios.post('http://localhost:4000/logout', {}, {withCredentials:true})
+    axios.post('http://obj-eco-api/logout', {}, {withCredentials:true})
     .then(() =>{ setEmail(); setCart([])});
   } 
 
@@ -121,7 +121,7 @@ const AppProvider = ({ children }) => {
     if (checkItem && email) {
       const product = getItem(_id);
       const price = product.price;
-      axios.patch('http://localhost:4000/addcart', {cart: [...cart, {...product, inCart: true, count: 1, total: price}]}).then((res)=>{
+      axios.patch('http://obj-eco-api/addcart', {cart: [...cart, {...product, inCart: true, count: 1, total: price}]}).then((res)=>{
         setCart([...cart, {...product, inCart: true, count: 1, total: price}]);
         setModal(true);
         setModalContent(product);
@@ -138,7 +138,7 @@ const AppProvider = ({ children }) => {
     const car = getCart(_id);
     car.count = car.count + 1;
     car.total = car.count * car.price;
-    axios.patch('http://localhost:4000/addcart', {cart: [...cart]}
+    axios.patch('http://obj-eco-api/addcart', {cart: [...cart]}
     );
     setCount([cart]);
   }
@@ -151,7 +151,7 @@ const AppProvider = ({ children }) => {
     }
     else{
       car.total = car.count * car.price;
-      axios.patch('http://localhost:4000/addcart', {cart: [...cart]}
+      axios.patch('http://obj-eco-api/addcart', {cart: [...cart]}
       );
       setCount([car])
     }
@@ -165,7 +165,7 @@ const AppProvider = ({ children }) => {
     removed.inCart = false;
     setCart(removed);*/}
     const car = cart.filter((item)=> item._id !== _id);
-    axios.patch('http://localhost:4000/addcart', {cart: car}
+    axios.patch('http://obj-eco-api/addcart', {cart: car}
     ).then(()=> setCart(car))
   };
 
