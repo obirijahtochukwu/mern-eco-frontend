@@ -7,7 +7,6 @@ import { useGlobalContext } from '../context';
 export default function CreateAccount() {
 
   const user = useGlobalContext();
-  const [setCart] = user.carts
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -18,13 +17,12 @@ export default function CreateAccount() {
   
   const register = (e) =>{
     e.preventDefault();
-      Axios.post("https://obj-api.herokuapp.com/signup",{
+      Axios.post("http://localhost:4000/signup",{
         name: `${firstName} ${lastName}`,
         email: email,
         password: password,
       }).then((response)=>{
         user.setEmail(response.data.email);
-        setCart(response.data.cart);
         setFirstName('');
         setLastName('');
         setEmail('');

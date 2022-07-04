@@ -11,6 +11,7 @@ const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const user = useGlobalContext();
   const {cartTotalCount, searchModal, setSearchModal, logout, setLoading} = useGlobalContext();
+
   const submit = () =>{
     setIsSidebarOpen(false);
     setLoading(true);
@@ -33,8 +34,10 @@ const Sidebar = () => {
             </span>
             <span>
               {user.email ? 
-                <FaUserTimes onClick={logout} className='bar-icon m-3'/> : 
-                <FaUserPlus onClick={()=> window.location.assign('/signin')} className='bar-icon m-3'/>    
+                <FaUserTimes onClick={logout} className='bar-icon m-3'/> :
+                <Link to={'/signin'} onClick={submit} className='mb-logo'>
+                  <FaUserPlus className='bar-icon m-3'/>    
+                </Link> 
               }
             </span>
             <span>
